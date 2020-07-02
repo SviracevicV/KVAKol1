@@ -1,0 +1,38 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Datum</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let racun of racuni">
+        <td>{{racun.id}}</td>
+        <td>{{racun.datumRacuna}}</td>
+        
+        <td>
+          <a routerLink="/racuni/{{racun.id}}">
+            View
+          </a>
+        </td>
+        <td>
+          <a>
+          <button (click)="onDelete(racun)" class="del">Delete</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Enter new Racun</h2>
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="racun">Datum</label>
+      <input name="datum" type="date" class="form-control" id="date" [(ngModel)]="racun.datumRacuna" required>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>

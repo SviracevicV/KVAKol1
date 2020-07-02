@@ -1,0 +1,64 @@
+{
+  "artikal": [
+    {
+      "id": 1,
+      "naziv": "Hleb",
+      "cena": 45.5
+    },
+    {
+      "id": 2,
+      "naziv": "Mleko",
+      "cena": 78.39
+    },
+    {
+      "id": 3,
+      "naziv": "So",
+      "cena": 40
+    }
+  ],
+  "stavkaRacuna": [
+    {
+      "id": 1,
+      "racunId": 1,
+      "artikalId": 1,
+      "cena": 40,
+      "kolicina": 1
+    },
+    {
+      "id": 2,
+      "racunId": 1,
+      "artikalId": 2,
+      "cena": 80.5,
+      "kolicina": 2
+    },
+    {
+      "id": 3,
+      "racunId": 1,
+      "artikalId": 3,
+      "cena": 45,
+      "kolicina": 1
+    }
+  ],
+  "racun": [
+    {
+      "id": 1,
+      "datumRacuna": "2020-01-06"
+    },
+    {
+      "id": 2,
+      "datumRacuna": "2020-02-16"
+    },
+    {
+      "id": 3,
+      "datumRacuna": "2020-02-03"
+    },
+    {
+      "id": 4,
+      "datumRacuna": "2020-03-26"
+    },
+    {
+      "datumRacuna": "2020-07-07",
+      "id": 5
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Naziv</th>
+        <th scope="col">Cena</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artikal of artikli">
+        <td>{{artikal.id}}</td>
+        <td>{{artikal.naziv}}</td>
+        <td>{{artikal.cena}}</td>
+        
+        <td>
+          <a routerLink="/artikli/{{artikal.id}}">
+            View
+          </a>
+        </td>
+        <td>
+          <a>
+          <button (click)="onDelete(artikal)" class="del">Delete</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Enter new Artikal</h2>
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="ime">Naziv</label>
+      <input name="sname" type="text" class="form-control" id="ime" [(ngModel)]="artikal.naziv" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cena">Cena</label>
+      <input name="cena" type="text" class="form-control" id="cena" [(ngModel)]="artikal.cena" required>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
